@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Chidiebere David | Portfolio</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-chess: #a855f7;
+            --accent-global: #10b981;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: var(--bg-primary); color: var(--text-main); }
+        #splash-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #020617; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease, visibility 0.5s; }
+        .splash-title { font-size: 2rem; font-weight: bold; color: var(--text-main); letter-spacing: 2px; margin-bottom: 1rem; animation: pulse 1.5s infinite alternate; }
+        .loader-bar { width: 150px; height: 4px; background: #334155; border-radius: 2px; overflow: hidden; }
+        .loader-progress { width: 100%; height: 100%; background: var(--accent); animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; transform-origin: left; }
+        header { background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%); padding: 3.5rem 1rem; text-align: center; border-bottom: 1px solid #334155; }
+        header h1 { margin: 0; font-size: 2.8rem; color: var(--text-main); letter-spacing: 0.5px; }
+        header p { margin: 0.6rem 0 0 0; color: var(--accent); font-size: 1.1rem; font-weight: 500; }
+        .container { width: 90%; max-width: 900px; margin: 2.5rem auto; padding: 0 1rem; }
+        .card { background: var(--bg-card); padding: 2rem; margin-bottom: 2rem; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); }
+        h2 { color: var(--text-main); border-bottom: 2px solid #334155; padding-bottom: 0.5rem; margin-top: 0; font-size: 1.5rem; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { padding: 0.8rem 0; border-bottom: 1px solid #334155; display: flex; align-items: baseline; }
+        li:last-child { border-bottom: none; }
+        .badge { background: var(--accent); color: #0f172a; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800; margin-right: 12px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-chess { background: var(--accent-chess); color: #fff; }
+        .badge-global { background: var(--accent-global); color: #fff; }
+        .skill-group p { margin: 0.5rem 0; color: var(--text-muted); }
+        @keyframes loading { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+        @keyframes pulse { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-title">&lt; P C D . D E V &gt;</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+    <header>
+        <h1>Patrick Chidiebere David</h1>
+        <p>Frontend Engineer // National Essay Champion // FIDE Chess Competitor</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>🏆 National & Global Research Laurels</h2>
+            <ul>
+                <li><span class="badge">Winner</span> <span><strong>Caritas Nigeria 15th Anniversary National Essay Competition</strong> — Crowned national champion representing Abiolu Comprehensive College.</span></li>
+                <li><span class="badge">2nd Place</span> <span><strong>National Travel Essay Competition (NTEC 2026)</strong> — Back-to-back national grand finale podium finisher.</span></li>
+                <li><span class="badge">2nd Place</span> <span><strong>National Travel Essay Competition (NTEC 2025)</strong> — Awarded the national <em>Steadfast Spirit Award</em> for resilience.</span></li>
+                <li><span class="badge">3rd Place</span> <span><strong>National Travel Essay Competition (NTEC 2024)</strong> — Initial national podium breakthrough in civil aviation research.</span></li>
+                <li><span class="badge badge-global">Honors List</span> <span><strong>Immerse Education Essay Competition</strong> — Placed on the global honors list with a 10% international academic scholarship offer.</span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>♟️ FIDE Tournament & Team Chess Records</h2>
+            <ul>
+                <li><span class="badge badge-chess">3rd Place</span> <span><strong>NNPC-SNEPCo Lagos State Schools Chess Championship (2024)</strong> — Anchored team podium finish in strategic partnership with Chess in Slums Africa.</span></li>
+                <li><span class="badge badge-chess">8th Place</span> <span><strong>Ecobank National Schools Team Chess Championship</strong> — Led the school board into the national top 10 rankings.</span></li>
+                <li><span class="badge badge-chess">15th Place</span> <span><strong>Ecobank National Schools Team Chess Championship (2026)</strong> — Represented the elite high school division.</span></li>
+                <li><span class="badge badge-chess">Contender</span> <span><strong>Mide Vacation Chess Tournament</strong> — Competed individually in an open FIDE-rated tactical framework.</span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>💻 Systems Architecture & Stack</h2>
+            <div class="skill-group">
+                <p><strong>Core Scripting:</strong> HTML5 // CSS3 // JavaScript (ES6+)</p>
+                <p><strong>Specialties:</strong> High-Performance Responsive Web Layouts, UI/UX Design Engineering, Conversational Bot Frameworks</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                splash.style.visibility = 'hidden';
+            }, 2200);
+        });
+    </script>
+</body>
+</html>
